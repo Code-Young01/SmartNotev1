@@ -15,7 +15,7 @@
                 <strike>{{ todo['description'] }}</strike> {% else %} {{ todo['description'] }} {% endif %}
             </h4>
             <div class="about">{{ todo['created_at'].strftime('%Y-%m-%d') }}</div>
-            <a class="action" href="{{ url_for('todo.update', id=todo['id']) }}">Edit</a>
+            <a class="action" href="{{ url_for('todo.edit', id=todo['id']) }}">Edit</a>
         </div>
     </li>
     {% if not loop.last %}
